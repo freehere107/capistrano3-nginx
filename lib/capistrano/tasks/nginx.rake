@@ -32,7 +32,7 @@ namespace :nginx do
   end
 
   def nginx_use_sudo? key
-    return (fetch(:nginx_sudo_tasks).include?(key) || fetch(:nginx_sudo_paths).include?(key))
+    return false
   end
 
   def valid_nginx_config?
